@@ -4,7 +4,7 @@ import { getCurrentUser } from "./auth.js";
 
 let products = [];
 let currentPage = 1;
-const itemsPerPage = 8; // Thay đổi từ 8 thành 6
+const itemsPerPage = 6; // Thay đổi từ 8 thành 6
 
 export const CartStatus = {
   PENDING: "pending",
