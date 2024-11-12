@@ -3,10 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Đăng ký</title>
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="styles/responsive.css" />
-    <link rel="stylesheet" href="assets/font-awesome/css/all.min.css" />
+    <title>Thông tin cá nhân - Sweet Treats</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/responsive.css" />
+    <style>
+      .profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: calc(
+          100vh - 60px - 60px
+        ); /* Trừ đi chiều cao của header và footer */
+      }
+      .profile-info {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+      .profile-info p {
+        margin: 20px 0;
+      }
+      .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+      }
+    </style>
   </head>
   <body>
     <header class="app-bar">
@@ -22,59 +42,16 @@
     </header>
 
     <main>
-      <section class="form-section">
+      <section class="profile">
         <div class="container">
-          <div class="form-container">
-            <h2 class="section-title">Đăng ký</h2>
-            <form id="signUpForm" class="form">
-              <div class="form-group">
-                <div id="message" style="display: none"></div>
-                <label for="username" class="form-label">Tên đăng nhập</label>
-                <input
-                  type="text"
-                  id="username"
-                  name="username"
-                  class="form-input"
-                />
-                <span id="usernameError" class="error-text"></span>
-              </div>
-              <div class="form-group">
-                <label for="email" class="form-label">Email</label>
-                <input id="email" name="email" class="form-input" />
-                <span id="emailError" class="error-text"></span>
-              </div>
-              <div class="form-group">
-                <label for="password" class="form-label">Mật khẩu</label>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  class="form-input"
-                />
-                <span id="passwordError" class="error-text"></span>
-              </div>
-              <div class="form-group">
-                <label for="confirmPassword" class="form-label"
-                  >Xác nhận mật khẩu</label
-                >
-                <input
-                  type="password"
-                  id="confirmPassword"
-                  name="confirmPassword"
-                  class="form-input"
-                />
-                <span id="confirmPasswordError" class="error-text"></span>
-              </div>
-              <div class="form-links">
-                <a href="sign-in.html" class="form-link"
-                  >Đã có tài khoản? Đăng nhập</a
-                >
-              </div>
-              <button type="submit" class="btn btn-primary btn-sign-up">
-                Đăng ký
-              </button>
-            </form>
-            <div id="message" class="form-message"></div>
+          <h2 class="section-title">Thông tin cá nhân</h2>
+          <div class="profile-info">
+            <p><strong>Tên người dùng:</strong> <span id="username"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p>
+              <strong>Số sản phẩm đã mua:</strong>
+              <span id="purchaseCount"></span>
+            </p>
           </div>
         </div>
       </section>
@@ -85,7 +62,7 @@
         <div class="container">
           <div class="feature-grid">
             <div class="contact">
-              <a href="index.html" style="text-decoration: none;"><h1>Sweet Treats</h1></a>
+              <a href="../index.html" style="text-decoration: none;"><h1>Sweet Treats</h1></a>
               <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+C%C3%B4ng+nghi%E1%BB%87p+TP.HCM/@10.8221589,106.6842705,17z/data=!3m1!4b1!4m6!3m5!1s0x3174deb3ef536f31:0x8b7bb8b7c956157b!8m2!3d10.8221589!4d106.6868454!16s%2Fm%2F02pyzdj?hl=vi-VN&entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D" style="text-decoration: none;">
                 <div class="address" style="display: flex; align-items: center; justify-content: center;">
                   <i class="fa-solid fa-location-dot"></i>
@@ -114,10 +91,10 @@
             <div class="social">
               <h3 style="margin-top: -5px;">Theo dõi chúng tôi tại</h3>
               <div class="logo-social" style="text-align: center; margin-top: 5px;">
-                <a href="https://www.facebook.com/"><img style="height: 35px; margin-right: 20px;" src="assets/icons/square-facebook-brands-solid.svg" alt=""></a>
-                <a href="https://www.instagram.com/"><img style="height: 35px; margin-right: 20px;" src="assets/icons/instagram-brands-solid.svg" alt=""></a>
-                <a href="https://www.tiktok.com/"><img style="height: 35px; margin-right: 20px;" src="assets/icons/tiktok-brands-solid.svg" alt=""></a>
-                <a href="https://www.youtube.com/"><img style="height: 35px;" src="assets/icons/youtube-brands-solid.svg" alt=""></a>
+                <a href="https://www.facebook.com/"><img style="height: 35px; margin-right: 20px;" src="../assets/icons/square-facebook-brands-solid.svg" alt=""></a>
+                <a href="https://www.instagram.com/"><img style="height: 35px; margin-right: 20px;" src="../assets/icons/instagram-brands-solid.svg" alt=""></a>
+                <a href="https://www.tiktok.com/"><img style="height: 35px; margin-right: 20px;" src="../assets/icons/tiktok-brands-solid.svg" alt=""></a>
+                <a href="https://www.youtube.com/"><img style="height: 35px;" src="../assets/icons/youtube-brands-solid.svg" alt=""></a>
               </div>
             </div>
 
@@ -141,6 +118,52 @@
       <p style="margin-top: -50px;">Website made by Nguyễn Nhật Anh Thư - 22663651</p>
     </footer>
 
-    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="../scripts/main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const users = JSON.parse(localStorage.getItem("users"));
+        const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+        const purchaseHistory = JSON.parse(
+          localStorage.getItem("purchaseHistory")
+        );
+
+        const user = users.find((u) => u.id === currentUser.userId);
+        if (user) {
+          document.getElementById("username").textContent = user.username;
+          document.getElementById("email").textContent = user.email;
+        }
+
+        const totalPurchases = purchaseHistory.reduce((total, purchase) => {
+          return (
+            total +
+            purchase.items.reduce(
+              (itemTotal, item) => itemTotal + item.quantity,
+              0
+            )
+          );
+        }, 0);
+        document.getElementById("purchaseCount").textContent = totalPurchases;
+
+        const purchaseHistoryElement =
+          document.getElementById("purchaseHistory");
+        purchaseHistory.forEach((purchase) => {
+          if (purchase.items.length > 0) {
+            const purchaseElement = document.createElement("div");
+            purchaseElement.className = "purchase-item";
+            purchaseElement.innerHTML = `
+                        <p><strong>Ngày mua:</strong> ${new Date(
+                          purchase.date
+                        ).toLocaleDateString("vi-VN")}</p>
+                        <p><strong>Số lượng sản phẩm:</strong> ${purchase.items.reduce(
+                          (total, item) => total + item.quantity,
+                          0
+                        )}</p>
+                    `;
+            purchaseHistoryElement.appendChild(purchaseElement);
+          }
+        });
+      });
+    </script>
   </body>
 </html>

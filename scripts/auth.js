@@ -147,7 +147,7 @@ function handleSignUp(e) {
 
   showMessage("Đăng ký thành công! Vui lòng đăng nhập.", "success");
   setTimeout(() => {
-    window.location.href = "../sign-in.html";
+    window.location.href = "../pages/sign-in.html";
   }, 2000);
 }
 
